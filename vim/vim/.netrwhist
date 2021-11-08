@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/liuliping/program/nnff/git_version/src/gen_feature'
+let g:netrw_dirhist_7='/home/liuliping/program/nnff/git_version'
+let g:netrw_dirhist_6='/home/liuliping/program/nnff/git_version/bin'
+let g:netrw_dirhist_5='/home/liuliping/program/nnff/git_version'
+let g:netrw_dirhist_4='/home/liuliping/intel/oneapi/conda_channel'
+let g:netrw_dirhist_3='/home/liuliping/configs'
+let g:netrw_dirhist_2='/etc/v2ray'
+let g:netrw_dirhist_1='/etc/iptables'

@@ -1,0 +1,41 @@
+set nu
+set nocompatible
+set expandtab
+set softtabstop=4
+set hlsearch
+set textwidth=0
+set visualbell
+set mouse-=a
+set vb t_vb=
+set backspace=indent,eol,start
+if &diff
+    colorscheme evening
+endif
+hi Search term=standout ctermfg=0 ctermbg=3
+" this t_Co is important, so that the xshell will show the background color of
+" the status line
+set t_Co=256
+au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+
+filetype off
+" vundle jedi vim
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'davidhalter/jedi-vim'
+call vundle#end()            " required
+
+set encoding=utf-8
+syntax on
+"AirlineTheme
+let g:airline_theme='luna'
+
+" jedi-vim
+let g:jedi#popup_on_dot = 0
+autocmd FileType python setlocal completeopt-=preview
+let g:jedi#show_call_signatures = "0"
+let g:jedi#smart_auto_mappings = 0
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+autocmd Filetype fortran setlocal formatprg=fprettify\ --silent

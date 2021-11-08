@@ -1,0 +1,36 @@
+# ~/.bashrc
+#!bashrc
+alias l='ls'
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias ag='ase gui'
+alias g11='g++ --std=c++11'
+alias g++='g++ --std=c++11'
+alias icpc='icpc --std=c++11'
+# alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde -a'
+alias nv='nvidia-smi'
+alias nvidia-smi='nvidia-smi.exe'
+alias wme='w ${USER}'
+
+alias jobcd='source binjobcd'
+alias fprettify4='fprettify --strict-indent -i 4 -l 0'
+#alias renew='source ~/.bashrc'
+ulimit -s unlimited
+
+export PATH=/home/liuliping/.local/bin:$PATH
+export LANG=en_US.utf8
+export LC_NUMERIC=en_US.utf8
+export LC_MESSAGE=en_US.utf8
+export LC_TIME=en_US.utf8
+
+#source /etc/modules/init/zsh
+#export MODULEPATH=MODULEPATH:/opt/intel/oneapi/modulefiles
+
+alias loadintel='module load mkl; module load mpi; module load compiler;'
+#alias loadintel='source /opt/intel/oneapi/setvars.sh'
+
+#source ~/.local/env_cuda10.1.sh
+source ~/.local/env_cuda11.1.sh
+source ~/intel/oneapi/setvars.sh > /dev/null 2>/dev/null
+export PATH=/home/liuliping/program/nnff/use_version/bin:$PATH #MLFF-6404224f35b1
